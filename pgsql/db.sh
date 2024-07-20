@@ -6,6 +6,8 @@
 \l - list all database
 # to connect to database- is not inside psql
 psql -h localhost -p 5432 -U username -d databasename
+#to create using file
+psql -h localhost -p 5432 -U username -d databasename -f /path/filename.sql
 
 # create database
 CREATE DATABASE databasename;
@@ -23,3 +25,14 @@ GRANT CREATE ON DATABASE database TO username;
 GRANT USAGE ON SCHEMA schemaname TO username;
 #grant privilege on table
 GRANT SELECT ON TABLE usertable TO username;
+# create table  
+    # CREATE TABLE table_name(
+    #     column_name datatype constraints,
+    # )
+    CREATE TABLE person(
+        id int,
+        first_name VARCHAR(50),
+        last_name VARCHAR(50),
+        gender VARCHAR(6),
+        date_of_birth TIMESTAMP
+    )
