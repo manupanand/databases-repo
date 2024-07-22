@@ -36,3 +36,5 @@ GRANT SELECT ON TABLE usertable TO username;
         gender VARCHAR(6),
         date_of_birth TIMESTAMP
     )
+\d -`describe` to get list of all tables
+\d tablename - to describe the table
